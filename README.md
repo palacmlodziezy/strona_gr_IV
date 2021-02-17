@@ -1,1 +1,1 @@
-# strona xDDDDDD
+# strona
