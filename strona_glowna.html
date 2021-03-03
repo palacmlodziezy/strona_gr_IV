@@ -3,7 +3,82 @@
 <html>
 <head>
 <title>Pracownia informatyczna "Młodzi Programiści" - strona główna</title>
-<link rel="stylesheet" href="style.css">
+<style>
+  body {
+  padding; 0;
+  margin: 0;
+  overflow: hidden;
+  background-image: linear-gradient(to right, #c88301, #9e9a1a, #73aa4a, #44b47c, #05b9a9););
+}
+
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 20px;
+  width: 100%;}
+
+.side-menu-trigger {
+  border: 0;
+  border-radius: 5px;
+  background: #ffffff;
+  
+}
+
+.side-menu {
+  display: flex;
+  box-sizing: border-box;
+  position: absolute;
+  height: 100%;
+  width: 300px;
+  top: 20px;
+  right: -300px;
+  padding: 0;
+  background: #34b399;
+  transition: 0.3s transform ease-in-out;
+}
+
+.side-menu ul {
+  position: absolute;
+  display: flex;
+  height: calc(100% - 20px);
+  flex-wrap: wrap;
+  margin: 0 10px;
+  padding: 0;
+  list-style-type: none;
+  align-content: flex-start
+}
+
+.side-menu ul li {
+  display: flex;
+  height: 30px;
+  background: #ffffff;
+  flex-basis: 100%;
+  margin-top: 20px;
+  color: #696e9e;
+  border-radius: 5px;
+  overflow: hidden;
+  
+}
+
+.side-menu ul li a {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.side-menu-trigger:focus ~ .side-menu, .side-menu:hover {
+  transform: translateX(-300px); 
+}
+  </style>
+
 </head>
 <body>
 <nav class="site-nav">
