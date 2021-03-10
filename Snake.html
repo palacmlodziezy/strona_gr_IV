@@ -4,6 +4,9 @@
 <title>Snake</title>
 <meta charset="utf-8">
 <style>
+ #gc{
+    border: 7px dotted #05b9a9;
+ } 
  body {
  background-image: linear-gradient(to right, #c88301, #9e9a1a, #73aa4a, #44b47c, #05b9a9););}
 </style>
@@ -17,7 +20,7 @@ window.onload=function() {
     canv=document.getElementById("gc");
     ctx=canv.getContext("2d");
     document.addEventListener("keydown",keyPush);
-    setInterval(game,1000/15);
+    setInterval(game,1000/20);
 }
 px=py=10;
 gs=tc=20;
@@ -40,14 +43,14 @@ function game() {
     if(py>tc-1) {
         py= 0;
     }
-    ctx.fillStyle="aqua";
+    ctx.fillStyle="#9e9a1a";
     ctx.fillRect(0,0,canv.width,canv.height);
  
     ctx.fillStyle="lime";
     for(var i=0;i<trail.length;i++) {
-        ctx.fillRect(trail[i].x*gs,trail[i].y*gs,gs-2,gs-2);
+        ctx.fillRect(trail[i].x*gs,trail[i].y*gs,gs-1,gs-1);
         if(trail[i].x==px && trail[i].y==py) {
-            tail = 5;
+            tail = 1;
         }
     }
     trail.push({x:px,y:py});
